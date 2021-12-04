@@ -16,3 +16,5 @@ create dir: segmentation
 
 https://github.com/sjinu96/SPADE
 
+(정리해서 본 repo에 통합할 예정)
+
