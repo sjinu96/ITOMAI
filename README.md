@@ -48,9 +48,9 @@ cd ../../
 
 https://drive.google.com/drive/folders/1NBgc1ziGOhG9RzoMQpftq8oetUzp_n9D?usp=sharing
 
-위의 구글 드라이브에서 아래와 같이 7개의 파일을 받을 수 있다. 
-Files for Train & Test  : `classes_list.text, iter.text, loss_log.text, opt.pkl, opt.text`  (총 5개)
-Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
+위의 구글 드라이브에서 아래와 같이 7개의 파일을 받을 수 있다.   
+Files for Train & Test  : `classes_list.text, iter.text, loss_log.text, opt.pkl, opt.text`  (총 5개)  
+Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)  
 
 해당 repo의 `SPADE/checkpoints/Flickr`에 이미 5개의 파일은 올라가 있으며, 해당 경로에 latest_net_D.pth, latest_net_G.pth 파일만 넣어주면 학습과 테스트를 실행시킬 수 있다. 
 
