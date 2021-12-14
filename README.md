@@ -14,8 +14,12 @@ create dir: segmentation
 
 # SPADE
 
+![image](https://user-images.githubusercontent.com/71121461/145967478-5ae79b3e-eadb-4a88-abda-f51a5981af45.png)
+
+
 실행 예시 : https://velog.io/@sjinu/Test-Time-Train-Landscape-Image-using-Flickr-Segmenter-Flickr-SPADE-2-2021-12-05  
 (우선) 사용할 샘플 : https://velog.io/@sjinu/Sample-dataset-for-SPADE  
+
 
 ## 1. 설치
 
