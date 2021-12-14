@@ -54,10 +54,10 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 해당 repo의 `SPADE/checkpoints/Flickr`에 이미 5개의 파일은 올라가 있으며, 해당 경로에 latest_net_D.pth, latest_net_G.pth 파일만 넣어주면 학습과 테스트를 실행시킬 수 있다. 
 
--  `latest_net_D.pth, latest_net_G.pth` 의 파일 이름을 `50_net_D.pth, 50_net_G.pth`으로 바꾸는 것을 추천한다.
-  - (학습할 때마다 latest_net_D(G).pth는 새로운 모델로 대체되므로, 50 epoch을 original pre-trained model로 사용)
-  - 이는 이후에 `--which-epoch 50` 인자를 사용하면 학습과 테스트를 수행할 수 있다.  
-- 또한, 학습을 새로 할 경우 iter.text, opt.pkl, opt.text <-- 이 3개의 파일은 항상 원본으로 유지시켜주어야 한다(꼬임).
+*  `latest_net_D.pth, latest_net_G.pth` 의 파일 이름을 `50_net_D.pth, 50_net_G.pth`으로 바꾸는 것을 추천한다.
+   * latest_net_D(G).pth는 학습할 때마다 새로운 모델로 대체되기 때문에 기존 모델이 사라짐.
+   * 위와 같이 pth파일 명을 바꿨다면 추후에 `--which-epoch 50` 인자를 사용해서 학습과 테스트를 수행할 수 있다.  
+* 또한, 학습을 새로 할 경우 iter.text, opt.pkl, opt.text <-- 이 3개의 파일은 항상 원본으로 유지시켜주어야 한다(꼬임).
 
 
 ## 3. 학습 (for single image)
@@ -71,7 +71,8 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 　|- 0001.png   
  
 
-> sample들은 `SPADE/gm_TTTT` folder에 업로드 해놓음(지속적으로 추가 예정). ![image](https://user-images.githubusercontent.com/71121461/145966272-94f10a6f-00e3-4417-88f8-ad34408531db.png)
+> sample들은 `SPADE/gm_TTTT` folder에 업로드(지속적으로 추가 예정).
+![image](https://user-images.githubusercontent.com/71121461/145966272-94f10a6f-00e3-4417-88f8-ad34408531db.png)
 
 - image folder와 label folder 내의 이미지 이름은 같아야 함(위에서 0001).
 - 이미지가 `val_img2`이라면,  이에 해당하는 original label map은 `val_label2`이고, 여러가지 변형을 준 label map은 `val_label2_1, val_label2_2, ...`등으로 네이밍
