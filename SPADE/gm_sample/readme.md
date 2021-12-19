@@ -20,5 +20,5 @@ python train.py --image_dir gm_sample/train1_img --label_dir gm_sample/train1_la
 - 단, 당연히 gm_sample/test[번호] 는 train 할 때랑 동일하게 맞춰야 성능이 나올 것 
 
 ```
-python test.py  --image_dir gm_sample/test1_img --label_dir gm_TTTT/test1_labels --which_epoch 150 --name Flickr --dataset_mode custom --load_from_opt_file --gpu_ids -1 
+python test.py  --image_dir gm_sample/test1_img --label_dir gm_sample/test1_labels --which_epoch 150 --name Flickr --dataset_mode custom --load_from_opt_file --gpu_ids -1 
 ```
