@@ -89,7 +89,7 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 이 때 아래와 같이 학습을 수행하면 된다.
 ```
-$ python train.py --name Flickr --dataset_mode custom --label_dir gm_TTTT/val_label --image_dir gm_TTTT/val_img --continue_train --load_from_opt_file --gpu_ids 0 --niter 300 --save_epoch_freq 150 --batchSize 1 --lr 0.0005 -preprocess_mode resize_and_crop --which_epoch 50 --print_freq 10
+$ python train.py --name Flickr --dataset_mode custom --label_dir gm_TTTT/val_label --image_dir gm_TTTT/val_img --continue_train --load_from_opt_file --gpu_ids 0 --niter 300 --save_epoch_freq 150 --batchSize 1 --lr 0.0005 -preprocess_mode resize_and_crop --which_epoch 50 --display_freq 10
 ```
 
 다른 건 필수적이지만, 아래는 선택이다.
@@ -101,7 +101,7 @@ $ python train.py --name Flickr --dataset_mode custom --label_dir gm_TTTT/val_la
 `--lr 0.0005` : 학습률을 0.0005로 사용할 시 `--niter 150` 정도면 충분함(100번학습).  
 `--which_epoch 50` : 위에서 pre-trained model의 이름을 `50_net_D(G).pth`로 바꿨을 경우, 이 모델의 parameter를 초기 parameter로 사용(사실상 필수).  
 `--gpu_ids 0` : 학습 환경에 맞춰사용.  
-`--print_frep 10` : 사실 뭔지 기억이 잘 안남. 당장은 필요 없을듯  
+`--display_frep 10` : (아마) 10 epoch마다 `checkpoints/Flickr/web/images/..`에 학습 추이 저장해줄 것. 
 
 
 
