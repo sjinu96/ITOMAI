@@ -30,6 +30,11 @@ git clone https://github.com/sjinu96/ITOMAI
 cd ITOMAI/SPADE/
 ```
 
+Create env
+```
+conda create --name spade python=3.7 
+```
+
 This code requires PyTorch 1.0 and python 3+. Please install dependencies by
 ```bash
 pip install -r requirements.txt
