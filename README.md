@@ -76,7 +76,8 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 　|- 0001.png   
  
 
-> sample들은 `SPADE/gm_TTTT` folder에 업로드(지속적으로 추가 예정).
+(변경 전)
+> sample들은 `SPADE/gm_sample` folder에 업로드(지속적으로 추가 예정).
 ![image](https://user-images.githubusercontent.com/71121461/145966272-94f10a6f-00e3-4417-88f8-ad34408531db.png)
 
 - image folder와 label folder 내의 이미지 이름은 같아야 함(위에서 0001).
@@ -89,7 +90,7 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 이 때 아래와 같이 학습을 수행하면 된다.
 ```
-$ python train.py --name Flickr --dataset_mode custom --label_dir gm_TTTT/val_label --image_dir gm_TTTT/val_img --continue_train --load_from_opt_file --gpu_ids 0 --niter 300 --save_epoch_freq 150 --batchSize 1 --lr 0.0005 -preprocess_mode resize_and_crop --which_epoch 50 --display_freq 10
+$ python train.py --name Flickr --dataset_mode custom --label_dir gm_sample/train_labels --image_dir gm_sample/train_img --continue_train --load_from_opt_file --gpu_ids 0 --niter 300 --save_epoch_freq 150 --batchSize 1 --lr 0.0005 -preprocess_mode resize_and_crop --which_epoch 50 --display_freq 10
 ```
 
 다른 건 필수적이지만, 아래는 선택이다.
@@ -122,14 +123,14 @@ $ python train.py --name Flickr --dataset_mode custom --label_dir gm_TTTT/val_la
 ## 4. Test
 
 ```
-%python test.py --name Flickr --dataset_mode custom --load_from_opt_file --gpu_ids -1 --which_epoch [사용할 model의 epoch] --image_dir gm_TTTT/val_img --label_dir gm_TTTT/val_label
+%python test.py --name Flickr --dataset_mode custom --load_from_opt_file --gpu_ids -1 --which_epoch [사용할 model의 epoch] --image_dir gm_sample/test_img --label_dir gm_sample/test_labels
 ```
 
 Test를 진행할 때에는 아래의 인자만 변경해주면 된다.  
 
 `--which epoch` : 어떤 모델을 사용할지. ex) `--which epoch 150` : `150_net_G.pth` 모델 사용  
-`--image_dir` : 이미지 폴더. ex) `SPADE/gm_TTTT/val_img2`  
-`--label_dir` : 이미지 폴더에 맞는 라벨. ex) `SPADE/gm_TTTT/val_label2_1`, `SPADE/gm_TTTT/val_label2_2`, `SPADE/gm_TTTT/val_label2_3`  
+`--image_dir` : 이미지 폴더. ex) `SPADE/gm_sample/test3_img`  
+`--label_dir` : 이미지 폴더에 맞는 라벨. ex) `SPADE/gm_TTTT/test3_labels`
 
 실행 결과는 아래에 저장될 것.  
 `SPADE/results/Flickr/train_[epoch]/images/input_label`  
