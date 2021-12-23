@@ -17,7 +17,10 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--no_html', action='store_true', help='do not save intermediate training results to [opt.checkpoints_dir]/[opt.name]/web/')
         parser.add_argument('--debug', action='store_true', help='only do one epoch and displays at each iteration')
         parser.add_argument('--tf_log', action='store_true', help='if specified, use tensorboard logging. Requires tensorflow installed')
-
+        
+        # for Single Image Training(2021-12-23 추가)
+        parser.add_argument('--skip_losses', action='store_true', help='학습 시 손실함수 추이 출력 생략(25% faster Training')
+        
         # for training
         parser.add_argument('--continue_train', action='store_true', help='continue training: load the latest model')
         parser.add_argument('--which_epoch', type=str, default='latest', help='which epoch to load? set to latest to use latest cached model')
@@ -45,5 +48,8 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--gan_mode', type=str, default='hinge', help='(ls|original|hinge)')
         parser.add_argument('--netD', type=str, default='multiscale', help='(n_layers|multiscale|image)')
         parser.add_argument('--lambda_kld', type=float, default=0.05)
+        
+        
+        
         self.isTrain = True
         return parser
