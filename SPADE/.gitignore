@@ -1,5 +1,3 @@
-checkpoints/
-results/
 .idea/
 *.tar.gz
 *.zip
