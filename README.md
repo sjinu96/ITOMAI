@@ -1,5 +1,10 @@
-# ITOMAI: Tobigs 15&16 기 이미지 생성 프로젝트
-**Interactive Tools for Object Manipulation in Art Images**
+# Interactive Tools for Object Manipulation in Art Images
+> **ITOMAI: Tobigs 15&16 기 이미지 생성 프로젝트**
+- 15기 : 김현지, 박진수, 오주영, 이윤정
+- 16기 : 김경준
+
+
+---
 
 
 <img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609803-4e5508f8-f5a2-44e1-bdfa-c116e9a66c24.png">
@@ -10,20 +15,11 @@ https://user-images.githubusercontent.com/71121461/149610182-84c2af7b-b38a-42dd-
 
 
 
-## 2. MEMBER
-- 15기 김현지
-- 15기 박진수
-- 15기 오주영
-- 15기 이윤정
-- 16기 김경준
-
-
-
 ---
 
 # On your computer(참고용, 환경 테스트 후 재배포 예정)
 
-## 1. Enrionments Settings
+## 2. Enrionments Settings
 
 Clone this repo.
 ```bash
@@ -49,7 +45,7 @@ cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
 cd ../../..
 ```
 
-## 2. Download Flickr-Landscape pre-trained SPADE 
+## 3. Download Flickr-Landscape pre-trained SPADE 
 
 https://drive.google.com/drive/folders/1NBgc1ziGOhG9RzoMQpftq8oetUzp_n9D?usp=sharing
 
@@ -58,7 +54,7 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 
 
-## 3. Run Demo
+## 4. Run Demo
 
 ```
 cd demo
