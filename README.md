@@ -1,11 +1,19 @@
-# ITOMAI - Tobigs
+# ITOMAI - Tobigs 15 & 16 기
 Interactive Tools for Object Manipulation in Art Images
+
+
+https://user-images.githubusercontent.com/71121461/149610182-84c2af7b-b38a-42dd-8aed-853cd437e49c.mp4
+
 
 <img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609803-4e5508f8-f5a2-44e1-bdfa-c116e9a66c24.png">
 
-<img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609805-46ba39e6-93dd-4d5c-8499-d80b36281224.png">
 
-<img width="1393" alt="image" src="https://user-images.githubusercontent.com/71121461/149609812-4257c877-9cf2-451e-9ad5-7e15dd8e81dd.png">
+- 15기 김현지
+- 15기 박진수
+- 15기 오주영
+- 15기 이윤정
+- 16기 김경준
+
 
 
 ---
@@ -61,6 +69,12 @@ https://user-images.githubusercontent.com/71121461/149610078-7fc8bc80-a9d2-439f-
 
 
 https://user-images.githubusercontent.com/71121461/149610086-abff3dfc-7dcd-429a-80de-eed19371a07f.mp4
+
+
+
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609805-46ba39e6-93dd-4d5c-8499-d80b36281224.png">
+
+<img width="1393" alt="image" src="https://user-images.githubusercontent.com/71121461/149609812-4257c877-9cf2-451e-9ad5-7e15dd8e81dd.png">
 
 
 
