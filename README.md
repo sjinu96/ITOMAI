@@ -10,15 +10,14 @@ Interactive Tools for Object Manipulation in Art Images
 
 ---
 
-# SPADE
+# Enrionments Settings
 
-## 1. Environments
 
 
 Clone this repo.
 ```bash
 git clone https://github.com/sjinu96/ITOMAI
-cd ITOMAI/SPADE/
+cd ITOMAI
 ```
 
 Create env
@@ -33,18 +32,35 @@ pip install -r requirements.txt
 
 This code also requires the Synchronized-BatchNorm-PyTorch rep.
 ```
-cd models/networks/
+cd SPADE/models/networks/
 git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
 cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
-cd ../../
+cd ../../..
 ```
 
 ## 2. Download Flickr-Landscape pre-trained SPADE 
 
 https://drive.google.com/drive/folders/1NBgc1ziGOhG9RzoMQpftq8oetUzp_n9D?usp=sharing
 
-위의 구글 드라이브에서 아래와 같이 7개의 파일을 받을 수 있다.   
 Files for Train & Test  : `classes_list.text, iter.text, loss_log.text, opt.pkl, opt.text`  (총 5개)  
 Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)  
+
+
+
+# Run Demo
+
+```
+cd demo
+streamlit run demo.py
+```
+
+
+
+https://user-images.githubusercontent.com/71121461/149610078-7fc8bc80-a9d2-439f-a9f5-46021b36d751.mov
+
+
+
+https://user-images.githubusercontent.com/71121461/149610086-abff3dfc-7dcd-429a-80de-eed19371a07f.mp4
+
 
 
