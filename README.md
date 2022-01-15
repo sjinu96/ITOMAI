@@ -1,4 +1,4 @@
-# ITOMAI - Tobigs 15 & 16 기
+# ITOMAI: Tobigs 15&16 기 이미지 생성 프로젝트
 **Interactive Tools for Object Manipulation in Art Images**
 
 
@@ -21,9 +21,9 @@ https://user-images.githubusercontent.com/71121461/149610182-84c2af7b-b38a-42dd-
 
 ---
 
-## 3. Enrionments Settings
+# On your computer(참고용, 환경 테스트 후 재배포 예정)
 
-
+## 1. Enrionments Settings
 
 Clone this repo.
 ```bash
@@ -49,7 +49,7 @@ cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
 cd ../../..
 ```
 
-## 4. Download Flickr-Landscape pre-trained SPADE 
+## 2. Download Flickr-Landscape pre-trained SPADE 
 
 https://drive.google.com/drive/folders/1NBgc1ziGOhG9RzoMQpftq8oetUzp_n9D?usp=sharing
 
@@ -58,7 +58,7 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 
 
-## 5. Run Demo
+## 3. Run Demo
 
 ```
 cd demo
@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/71121461/149610078-7fc8bc80-a9d2-439f-
 
 > enjoy ! 
 
-## 6. Other Example
+# Other Example
 
 https://user-images.githubusercontent.com/71121461/149610086-abff3dfc-7dcd-429a-80de-eed19371a07f.mp4
 
