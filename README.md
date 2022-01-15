@@ -19,7 +19,7 @@ https://user-images.githubusercontent.com/71121461/149610182-84c2af7b-b38a-42dd-
 
 # On your computer(참고용, 환경 테스트 후 재배포 예정)
 
-## 2. Enrionments Settings
+## 1. Enrionments Settings
 
 Clone this repo.
 ```bash
@@ -45,7 +45,7 @@ cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
 cd ../../..
 ```
 
-## 3. Download Flickr-Landscape pre-trained SPADE 
+## 2. Download Flickr-Landscape pre-trained SPADE 
 
 https://drive.google.com/drive/folders/1NBgc1ziGOhG9RzoMQpftq8oetUzp_n9D?usp=sharing
 
@@ -54,7 +54,7 @@ Pretrained model : `latest_net_D.pth, latest_net_G.pth` (총 2개)
 
 
 
-## 4. Run Demo
+## 3. Run Demo
 
 ```
 cd demo
