@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from torchvision import transforms
 from PIL import Image
 import numpy as np
+import streamlit as st
 
 class Args:
     D_steps_per_G=1
@@ -85,29 +86,60 @@ def denorm(x):
     x = x.astype(np.uint8)
     return x
 
-def generate_image(image, label, user_label, origin_shape):
+
+def start_adaptation(image, label, origin_shape, state):
     image = torch.tensor(image).permute(2, 0, 1).unsqueeze(0).float()
     image = (image - 127.5) / 127.5
     image = F.interpolate(image, size = (512,512), mode = "bilinear", align_corners = True)
-    print(np.unique(user_label))
     opt = Args()
+    
+    # opt.gpu_ids=[]
+
+    state.text('Load Model...')
     trainer = Pix2PixTrainer(opt)
     x = {"label" : torch.tensor(label).unsqueeze(0).unsqueeze(0).float(),
          "instance" : torch.tensor([0]),
          "image" : image,
          "path" : ""}
 
-    for i in range(30):
+    epoch=130
+    for i in range(epoch):
+        state.text(f"Adaptation... ({round(i/90*100, 2)}%)")
         trainer.run_generator_one_step(x)
         trainer.run_discriminator_one_step(x)
         trainer.update_learning_rate(i)
 
-    x["label"] = torch.tensor(user_label).unsqueeze(0).unsqueeze(0).float()
+    # x["label"] = torch.tensor(user_label).unsqueeze(0).unsqueeze(0).float()
 
     trainer.pix2pix_model.eval()
     output = trainer.pix2pix_model(x, "inference")
-    output = F.interpolate(output, size = (origin_shape[0], origin_shape[1]), mode = "bilinear", align_corners = True)
+
+    # output = F.interpolate(output, size = (origin_shape[0], origin_shape[1]), mode = "bilinear", align_corners = True)
     output = denorm(output)
+
+    return trainer, output, x
+
+
+def generate_image(trainer, x, user_label, origin_shape):
+    if st.session_state.trigger.cpu:
+        # trainer.pix2pix_model.eval()
+        x["label"] = torch.tensor(user_label).unsqueeze(0).unsqueeze(0).float()
+        # # print(torch.tensor(x["image"].permute(2,0,1).shape))
+        # image = torch.tensor(x["image"]).permute(2, 0, 1).unsqueeze(0).float()
+        # image = (image - 127.5) / 127.5
+        # image = F.interpolate(image, size = (512,512), mode = "bilinear", align_corners = True)
+        # x["image"] = image 
+        output = trainer(x, 'inference') # 사실 trainer가 아니라 pix2pix
+        output = denorm(output)
+    else:
+        
+        trainer.pix2pix_model.eval()
+        x["label"] = torch.tensor(user_label).unsqueeze(0).unsqueeze(0).float()
+        output = trainer.pix2pix_model(x, "inference")
+        # st.session_state.trigger.cpu
+        # reshape 잠시 생략
+        # output = F.interpolate(output, size = (origin_shape[0], origin_shape[1]), mode = "bilinear", align_corners = True)
+        output = denorm(output)
 
     return output
     

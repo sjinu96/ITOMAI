@@ -68,7 +68,7 @@ def segment_single_image(img, device):
     model_path = "required_data/deeplabv2_resnet101_msc-cocostuff164k-100000.pth"
 
     CONFIG = OmegaConf.load(config_path)
-
+    print(CONFIG)
     postprocessor = setup_postprocessor(CONFIG) if crf else None
     model = eval(CONFIG.MODEL.NAME)(n_classes=CONFIG.DATASET.N_CLASSES)
     state_dict = torch.load(model_path, map_location=lambda storage, loc: storage)
