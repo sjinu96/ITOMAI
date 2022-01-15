@@ -8,7 +8,7 @@
 
 
 ## RESULT
-<img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609803-4e5508f8-f5a2-44e1-bdfa-c116e9a66c24.png">
+<img width="852" alt="image" src="https://user-images.githubusercontent.com/71121461/149609803-4e5508f8-f5a2-44e1-bdfa-c116e9a66c24.png">
 
 ## DEMO
 https://user-images.githubusercontent.com/71121461/149610182-84c2af7b-b38a-42dd-8aed-853cd437e49c.mp4
