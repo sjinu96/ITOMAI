@@ -1,8 +1,13 @@
 # ITOMAI - Tobigs
 Interactive Tools for Object Manipulation in Art Images
 
-<img width="889" alt="image" src="https://user-images.githubusercontent.com/71121461/149609785-5444fdd4-88ce-49f3-b4ba-1ace62cd521e.png">
-  
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609803-4e5508f8-f5a2-44e1-bdfa-c116e9a66c24.png">
+
+<img width="1394" alt="image" src="https://user-images.githubusercontent.com/71121461/149609805-46ba39e6-93dd-4d5c-8499-d80b36281224.png">
+
+<img width="1393" alt="image" src="https://user-images.githubusercontent.com/71121461/149609812-4257c877-9cf2-451e-9ad5-7e15dd8e81dd.png">
+
+
 ---
 
 # SPADE
