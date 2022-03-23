@@ -1,5 +1,5 @@
 # Interactive Tools for Object Manipulation in Art Images
-> **ITOMAI: Tobigs 15&16 기 이미지 생성 프로젝트**
+> **ITOMAI: Tobigs 15&16 기 이미지 생성 프로젝트** | [Video](https://www.youtube.com/watch?v=F0imSPRpBQM)
 - 15기 : 김현지, 박진수, 오주영, 이윤정
 - 16기 : 김경준
 
